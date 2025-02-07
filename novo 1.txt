@@ -1,0 +1,9 @@
+
+        DTColumnBuilder.newColumn('NomeTitular).Width(40)
+        DTColumnBuilder.newColumn('TipoRendaTitular).Width(10)
+        DTColumnBuilder.newColumn('ValorRendaFormalTitular).Width(20)
+        DTColumnBuilder.newColumn('ValorRendaInformalTitular).Width(20)
+        DTColumnBuilder.newColumn('NomeSegundoProponente).Width(40)
+        DTColumnBuilder.newColumn('TipoRendaSegundoProponente).Width(10)
+        DTColumnBuilder.newColumn('ValorRendaFormalSegundoProponente).Width(20)
+        DTColumnBuilder.newColumn('ValorRendaInformalSegundoProponente).Width(20)

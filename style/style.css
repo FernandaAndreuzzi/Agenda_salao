@@ -1,0 +1,183 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: white;
+}
+
+
+.header {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 50px 0;
+  text-align: left;
+  background-image: url('image/salao.jpg');   
+  image-orientation: from-image;
+  background-repeat: cover;
+  background-size: cover;
+  font-size: 5rem !important;
+  
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 200px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.sidebar {
+  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    float: left;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ffffff;
+  }
+
+button[type="submit"] {
+  background-color: black; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 16px; 
+}
+
+button[type="submit"]:hover {
+  background-color: black; 
+  color: rgb(255, 255, 255); 
+  border: 1px solid rgb(255, 255, 255); 
+}
+
+
+footer {
+  padding: 1.5em;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  margin-top: 2em;
+  position: fixed; /* Mantém o rodapé fixo na parte inferior */
+  bottom: 0;
+  width: 100%;
+}
+
+.banner {
+    background-color: #fff;
+    padding: 300px 0;
+    text-align: left;
+    background-image: url('../image/salao.jpg');
+    image-orientation: from-image;
+    background-repeat: cover;
+    background-size: cover;
+    margin:0rem !important;
+}
+ol,ul{
+  margin-bottom: 0px !important;
+}
+.fullscreen-img {
+  width: 100vw;  
+  height: 100vh; 
+  object-fit: cover; 
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.features {
+    padding: 50px 0;
+}
+h1{
+    font-size: 5rem !important;
+}
+
+.texto-banner{
+  margin-left: 10rem;
+}
+
+
+main{
+  margin: 1rem 10rem;
+  display: flex;               
+  flex-direction: column;   
+  justify-content: center;     
+  align-items: center;        
+  height: 100%;                 
+  text-align: center;          
+}
+
+main h2{
+  margin-bottom: 1rem;
+}
+
+.formulario{
+  margin: 1rem 10rem;
+}
+
+.formulario .campo{
+  margin-bottom: 0.5rem;
+}
+
+.formulario input{
+  width: 100%;
+}
+.formulario label{
+  font-weight: 700;
+}
+
+body > div{
+  
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+}
