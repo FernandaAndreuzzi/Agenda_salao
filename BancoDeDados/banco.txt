@@ -1,0 +1,57 @@
+CREATE DATABASE `agenda_salao` ;
+
+-- agenda_salao.acesso definition
+
+CREATE TABLE `acesso` (
+  `IdAcesso` int NOT NULL AUTO_INCREMENT,
+  `DataInicioSessao` datetime NOT NULL,
+  `DataTerminoSessao` datetime DEFAULT NULL,
+  `IdPessoa` int DEFAULT NULL,
+  PRIMARY KEY (`IdAcesso`),
+  KEY `acesso_pessoas_FK` (`IdPessoa`),
+  CONSTRAINT `acesso_pessoas_FK` FOREIGN KEY (`IdPessoa`) REFERENCES `pessoas` (`IdPessoa`)
+) ;
+
+
+-- agenda_salao.agenda definition
+
+CREATE TABLE `agenda` (
+  `IdAgenda` int NOT NULL AUTO_INCREMENT,
+  `CriadoEm` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `DataAgendamento` timestamp NULL DEFAULT NULL,
+  `FlagCorte` tinyint(1) DEFAULT NULL,
+  `FlagLuzes` tinyint(1) DEFAULT NULL,
+  `FlagHidratacao` tinyint(1) DEFAULT NULL,
+  `FlagNutricaoCapilar` tinyint(1) DEFAULT NULL,
+  `FlagReconstrucaoCapilar` tinyint(1) DEFAULT NULL,
+  `FlagManicure` tinyint(1) DEFAULT NULL,
+  `FlagPedicure` tinyint(1) DEFAULT NULL,
+  `FlagStatus` int DEFAULT NULL,
+  `IdPessoa` int DEFAULT NULL,
+  `FlagColoracao` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`IdAgenda`),
+  KEY `fk_IdPessoa` (`IdPessoa`),
+  CONSTRAINT `fk_IdPessoa` FOREIGN KEY (`IdPessoa`) REFERENCES `pessoas` (`IdPessoa`)
+) ;
+
+-- agenda_salao.pessoas definition
+
+CREATE TABLE `pessoas` (
+  `IdPessoa` int NOT NULL AUTO_INCREMENT,
+  `CriadoEm` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Nome` varchar(255) NOT NULL,
+  `Telefone` varchar(20) NOT NULL,
+  `Cpf` varchar(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `DataNascimento` timestamp NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Logradouro` varchar(255) NOT NULL,
+  `Numero` varchar(10) NOT NULL,
+  `TipoPessoa` int DEFAULT NULL,
+  `Senha` varchar(255) DEFAULT NULL,
+  `Situacao` int DEFAULT NULL,
+  PRIMARY KEY (`IdPessoa`),
+  UNIQUE KEY `Email_UNIQUE` (`Email`)
+) ;
+
+/*Senha  1234*/
+INSERT INTO agenda_salao.pessoas (IdPessoa, CriadoEm, Nome, Telefone, Cpf, DataNascimento, Email, Logradouro, Numero, TipoPessoa, Senha, Situacao) VALUES(4, '2025-02-05 00:11:02', 'Administrador Sistema', '1423423423424', '43732418804', '1995-09-25 00:00:00', 'administrado@sistema.com', 'weqwe', 'wqeqwe', 0, '$2y$10$JVpG3MCFWQ78OenJHA9kg.u5MOehu44nYOaEXgjbEiEFe//xp978S', 0);
