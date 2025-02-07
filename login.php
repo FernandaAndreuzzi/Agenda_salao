@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['loggedin'] = true;
             $_SESSION['user_id'] = $user['IdPessoa'];
             $_SESSION['email'] = $user['Email'];
-            $_SESSION['tipoUsuario'] = $user['TipoUsuario'];
+            $_SESSION['tipoUsuario'] = $user['TipoPessoa'];
             $dataHoraAtual = date('Y-m-d H:i:s'); 
 
             $idUsuario = $user['IdPessoa'];
